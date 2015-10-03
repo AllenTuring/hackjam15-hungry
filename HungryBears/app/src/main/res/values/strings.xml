@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Hungry Bears</string>
+    <string name="first_run_prompt">Please select your current meal point plan: <br /></string>
+    <string-array name="meal_plans">
+        <item>Standard</item>
+        <item>Premium</item>
+        <item>Ultimate Access</item>
+        <item>Non-Resident: Blue</item>
+        <item>Non-Resident: Gold</item>
+        <item>Non-Resident: Platinum</item>
+        <item>Other</item>
+    </string-array>
+</resources>
