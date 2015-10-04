@@ -3,13 +3,11 @@ package com.hungrybears;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.Spinner;
+import android.widget.*;
 
-public class FirstRun extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+
+public class FirstRun extends AppCompatActivity
+        implements AdapterView.OnItemSelectedListener, View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +20,12 @@ public class FirstRun extends AppCompatActivity implements AdapterView.OnItemSel
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         meal_plan.setAdapter(adapter);
         meal_plan.setOnItemSelectedListener(this);
+
+        Button bttnNext = (Button) findViewById(R.id.bttn_next);
+        bttnNext.setOnClickListener(this);
+
+        Double meal_points = 0.0;
+
     }
 
     public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
@@ -39,5 +43,12 @@ public class FirstRun extends AppCompatActivity implements AdapterView.OnItemSel
 
     public void onNothingSelected(AdapterView<?> parent) {
         // Do Nothing
+    }
+
+
+    @Override
+    public void onClick(View v) {
+        Spinner meal_plan = (Spinner) findViewById(R.id.meal_plan);
+        double points = MealPlan.getPointsFromPlan(meal_plan.getSelectedItem().toString());
     }
 }

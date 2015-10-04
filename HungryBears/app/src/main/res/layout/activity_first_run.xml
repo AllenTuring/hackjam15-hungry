@@ -18,23 +18,30 @@
         android:id="@+id/meal_plan"></Spinner>
 
     <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/LL_other_meal_points">
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Please enter your current \n meal point balance: "
+            android:text="Please enter your current meal point balance: "
             android:visibility="visible"/>
 
         <EditText
-            android:layout_width="100dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/other_meal_points"
             android:inputType="number"
             android:visibility="visible"
             android:layout_gravity="right" />
     </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/next_button"
+        android:id="@+id/bttn_next"
+        android:layout_gravity="right" />
 
 </LinearLayout>
