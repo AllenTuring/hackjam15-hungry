@@ -32,7 +32,7 @@ public class FirstRun extends AppCompatActivity
         // Create a SharedPreferences value
         SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor sharedPrefEditor = sharedPref.edit();
-        sharedPrefEditor.putBoolean("Setup Complete", False);
+        sharedPrefEditor.putBoolean("Setup Complete", false);
     }
 
     public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
@@ -62,6 +62,6 @@ public class FirstRun extends AppCompatActivity
         // Create
         SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor sharedPrefEditor = sharedPref.edit();
-        sharedPrefEditor.putBoolean("Setup Complete", True);
+        sharedPrefEditor.putBoolean("Setup Complete", true);
     }
 }
