@@ -11,4 +11,25 @@
         <item>Other</item>
     </string-array>
     <string name="next_button">Next</string>
+
+    <string name="add_trans">Add Transaction</string>
+    <string name="date">Date: </string>
+    <string name="amount">Amount Spent: </string>
+    <string name="store">Store: </string>
+    <string-array name="stores">
+        <item>DC - Cafe 3</item>
+        <item>DC - Clark Kerr</item>
+        <item>DC - Crossroads</item>
+        <item>DC - Foothill</item>
+        <item>Common Grounds</item>
+        <item>Concession Stand</item>
+        <item>GBC Produce Stand</item>
+        <item>Golden Bear</item>
+        <item>Pat Brown\'s</item>
+        <item>Qualcomm Cybercafe</item>
+        <item>Ramona\'s</item>
+        <item>Terrace Cafe</item>
+        <item>The Pro Shop</item>
+    </string-array>
+    <string name="add_button">Add!</string>
 </resources>
