@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.*;
 
 
-public class FirstRunActivity extends AppCompatActivity
+public class FirstRun extends AppCompatActivity
         implements AdapterView.OnItemSelectedListener, View.OnClickListener {
 
     @Override
