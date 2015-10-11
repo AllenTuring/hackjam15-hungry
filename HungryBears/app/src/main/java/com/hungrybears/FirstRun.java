@@ -70,7 +70,7 @@ public class FirstRun extends AppCompatActivity
         SharedPreferences.Editor sharedPrefEditor = sharedPref.edit();
         sharedPrefEditor.putString("Name", etext_name.getText().toString());
         sharedPrefEditor.putInt("NumMealPointsCents", (int) (points * 100));
-        sharedPrefEditor.putLong("StartTime", System.currentTimeMillis());
+        sharedPrefEditor.putLong("StartTimeMillis", System.currentTimeMillis());
         sharedPrefEditor.putBoolean("SetupComplete", true);
     }
 }
