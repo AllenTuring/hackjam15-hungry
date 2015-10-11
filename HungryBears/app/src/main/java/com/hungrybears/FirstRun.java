@@ -1,6 +1,7 @@
 package com.hungrybears;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -65,7 +66,7 @@ public class FirstRun extends AppCompatActivity
         Spinner meal_plan = (Spinner) findViewById(R.id.meal_plan);
         double points = MealPlan.getPointsFromPlan(meal_plan.getSelectedItem().toString());
 
-        // Create
+        // Create Shared Preferences entries
         SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor sharedPrefEditor = sharedPref.edit();
         sharedPrefEditor.putString("Name", etext_name.getText().toString());
@@ -73,5 +74,11 @@ public class FirstRun extends AppCompatActivity
         sharedPrefEditor.putLong("StartTimeMillis", System.currentTimeMillis());
         sharedPrefEditor.putBoolean("SetupComplete", true);
         sharedPrefEditor.commit();
+
+
+
+
+        // Intent to transition
+
     }
 }
