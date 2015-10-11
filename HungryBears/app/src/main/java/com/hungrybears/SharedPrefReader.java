@@ -27,7 +27,7 @@ public class SharedPrefReader {
         }
     }
 
-    private boolean getBoolean(String key) {
+    public boolean getBoolean(String key) {
         boolean b0 = s.getBoolean(key, true);
         boolean b1 = s.getBoolean(key, false);
         if (b0 ^ b1) {
@@ -36,7 +36,7 @@ public class SharedPrefReader {
         return b0;
     }
 
-    private int getInt(String key) {
+    public int getInt(String key) {
         int i0 = s.getInt(key, 0);
         int i1 = s.getInt(key, 1);
         if (i0 != i1) {
@@ -45,7 +45,7 @@ public class SharedPrefReader {
         return i0;
     }
 
-    private float getFloat(String key) {
+    public float getFloat(String key) {
         float f0 = s.getFloat(key, 0);
         float f1 = s.getFloat(key, 1);
         if (f0 != f1) {
@@ -54,7 +54,7 @@ public class SharedPrefReader {
         return f0;
     }
 
-    private long getLong(String key) {
+    public long getLong(String key) {
         long L0 = s.getLong(key, 0L);
         long L1 = s.getLong(key, 1L);
         if (L0 != L1) {
@@ -63,14 +63,14 @@ public class SharedPrefReader {
         return L0;
     }
 
-    private String getString(String key) {
+    public String getString(String key) {
         String s0 = s.getString(key, "");
         String s1 = s.getString(key, "stub");
         existsTest(key, s0, s1);
         return s0;
     }
 
-    private Set<String> getStringSet(String key) {
+    public Set<String> getStringSet(String key) {
         Set<String> ss0d = new TreeSet<String>();
         Set<String> ss1d = new TreeSet<String>();
         ss1d.add("stub");
@@ -80,7 +80,7 @@ public class SharedPrefReader {
         return ss0;
     }
 
-    private Map<String, ?> getAll() {
+    public Map<String, ?> getAll() {
         return s.getAll();
     }
 }
