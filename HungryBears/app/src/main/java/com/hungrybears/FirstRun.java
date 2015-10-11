@@ -72,5 +72,6 @@ public class FirstRun extends AppCompatActivity
         sharedPrefEditor.putInt("NumMealPointsCents", (int) (points * 100));
         sharedPrefEditor.putLong("StartTimeMillis", System.currentTimeMillis());
         sharedPrefEditor.putBoolean("SetupComplete", true);
+        sharedPrefEditor.commit();
     }
 }
