@@ -75,6 +75,10 @@ public class FirstRun extends AppCompatActivity
         sharedPrefEditor.putBoolean("SetupComplete", true);
         sharedPrefEditor.commit();
 
+        Toast.makeText(getApplicationContext(), "Saved!",
+                Toast.LENGTH_SHORT).show();
         // Intent to transition
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
     }
 }
