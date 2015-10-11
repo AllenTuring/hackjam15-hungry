@@ -17,6 +17,9 @@ public class FirstRun extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_run);
 
+        // Name Field
+        EditText etext_name = (EditText) findViewById(R.id.etext_name);
+
         // Spinner
         Spinner meal_plan = (Spinner) findViewById(R.id.meal_plan);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -32,7 +35,7 @@ public class FirstRun extends AppCompatActivity
         // Create a SharedPreferences value
         SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor sharedPrefEditor = sharedPref.edit();
-        sharedPrefEditor.putBoolean("Setup Complete", false);
+        sharedPrefEditor.putBoolean("SetupComplete", false);
     }
 
     public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
@@ -55,6 +58,9 @@ public class FirstRun extends AppCompatActivity
 
     @Override
     public void onClick(View v) {
+        // Name Field
+        EditText etext_name = (EditText) findViewById(R.id.etext_name);
+
         // Spinner
         Spinner meal_plan = (Spinner) findViewById(R.id.meal_plan);
         double points = MealPlan.getPointsFromPlan(meal_plan.getSelectedItem().toString());
@@ -62,6 +68,9 @@ public class FirstRun extends AppCompatActivity
         // Create
         SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor sharedPrefEditor = sharedPref.edit();
-        sharedPrefEditor.putBoolean("Setup Complete", true);
+        sharedPrefEditor.putString("Name", etext_name.getText().toString());
+        sharedPrefEditor.putInt("NumMealPointsCents", (int) (points * 100));
+        sharedPrefEditor.putLong("StartTimeMillis", System.currentTimeMillis());
+        sharedPrefEditor.putBoolean("SetupComplete", true);
     }
 }

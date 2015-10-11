@@ -11,16 +11,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Small Text"
-        android:id="@+id/textView" />
+        android:text="@string/name_field_label" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:text=""
         android:ems="10"
-        android:id="@+id/editText" />
+        android:id="@+id/etext_name" />
 
     <TextView
         android:layout_width="wrap_content"
