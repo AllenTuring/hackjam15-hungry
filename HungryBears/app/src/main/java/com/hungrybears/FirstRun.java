@@ -75,10 +75,6 @@ public class FirstRun extends AppCompatActivity
         sharedPrefEditor.putBoolean("SetupComplete", true);
         sharedPrefEditor.commit();
 
-
-
-
         // Intent to transition
-
     }
 }
